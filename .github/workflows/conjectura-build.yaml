@@ -1,6 +1,3 @@
-# To better understand this file read this:
-# https://docs.ionos.space/docs/github-actions-customization/
-
 name: "Deploy Now: Execute Build"
 
 on:
@@ -14,26 +11,47 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: ./
+  DEPLOYMENT_FOLDER: frontend/build
 
 jobs:
-# Please do not rename this job
   build-project:
     name: build conjectura
     runs-on: ubuntu-latest
+
     steps:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          submodules: 'recursive'
+          submodules: recursive
 
-# Please do not touch the following action
+      # ✅ 1) Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "yarn"
+          cache-dependency-path: frontend/yarn.lock
+
+      # ✅ 2) Build React (CRA)
+      - name: Install & Build frontend
+        working-directory: frontend
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
+      # (Optionnel mais utile) vérifier que index.html existe
+      - name: Check build output
+        run: |
+          test -f frontend/build/index.html
+          echo "✅ index.html exists"
+
+      # ✅ 3) Upload ONLY build folder to IONOS
       - name: Store deployment content
         uses: ionos-deploy-now/artifact-action@v1
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
-          service-host: api-eu.ionos.space
-          project-id: ebacdb41-3fef-415a-a809-271834df2b6a
+          service-host: api.eu.ionos.space
+          project-id: ebacdb41-3fef-415a-a889-271834df2b6a
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
