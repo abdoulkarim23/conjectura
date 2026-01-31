@@ -55,7 +55,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 255, 209, 0.1);
+  background: rgba(44, 110, 196, 0.10);
   margin-bottom: 24px;
   color: var(--brand-primary);
 }

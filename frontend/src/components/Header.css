@@ -17,9 +17,9 @@
 }
 
 .dark-header.scrolled {
-  background: rgba(0, 0, 0, 0.95);
+  background: var(--bg-primary);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 255, 209, 0.1);
+  box-shadow: 0 4px 20px rgba(92, 162, 255, 0.1);
 }
 
 .header-content {
@@ -32,14 +32,11 @@
 }
 
 .dark-logo-container {
-  height: 40px;
   display: flex;
   align-items: center;
 }
 
 .dark-logo {
-  height: 40px;
-  width: auto;
   object-fit: contain;
   cursor: pointer;
 }
@@ -63,11 +60,11 @@
 }
 
 .dark-nav-link:hover {
-  color: var(--text-primary);
+  color: var(--brand-primary);
 }
 
 .dark-nav-link.active {
-  color: var(--brand-active);
+  color: var(--brand-primary);
 }
 
 .btn-primary-header {

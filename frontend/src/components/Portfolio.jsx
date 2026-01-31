@@ -8,7 +8,7 @@ const projectsData = [
     category: 'Restauration',
     subcategory: 'IA Prédictive',
     description: "Système de gestion intelligent avec prédictions IA pour optimiser les stocks, réduire le gaspillage et maximiser les ventes. Réduction de 25% des pertes et augmentation de 18% des bénéfices.",
-    image: 'https://customer-assets.emergentagent.com/job_9abfeae2-33fc-48f5-b66f-2fa737af5aa6/artifacts/1vi0bwbf_image.png',
+    image: '/assets/images/sushi-shop.png',
     tags: ['Dashboard Analytics', 'Prédictions IA', 'Gestion Stocks']
   },
   {
@@ -17,7 +17,7 @@ const projectsData = [
     category: 'Juridique',
     subcategory: 'Automatisation',
     description: "Automatisation du traitement des documents juridiques et analyse prédictive des cas. Gain de 40% de temps sur l'analyse documentaire et amélioration de la précision des recherches jurisprudentielles.",
-    image: 'https://customer-assets.emergentagent.com/job_9abfeae2-33fc-48f5-b66f-2fa737af5aa6/artifacts/5sws75cd_image.png',
+    image: '/assets/images/cabinet.png',
     tags: ['NLP', 'Automatisation', 'SaaS']
   },
   {
@@ -26,7 +26,7 @@ const projectsData = [
     category: 'E-commerce',
     subcategory: 'Personnalisation IA',
     description: "Moteur de recommandation personnalisé et chatbot intelligent. Augmentation de 35% du panier moyen et amélioration de 50% du taux de satisfaction client grâce à l'assistance 24/7.",
-    image: 'https://customer-assets.emergentagent.com/job_9abfeae2-33fc-48f5-b66f-2fa737af5aa6/artifacts/iui80ajk_image.png',
+    image: '/assets/images/techstore.png',
     tags: ['Machine Learning', 'Chatbot', 'Personnalisation']
   }
 ];

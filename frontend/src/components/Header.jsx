@@ -33,9 +33,9 @@ export const Header = () => {
       <div className="header-content">
         <div className="dark-logo-container">
           <img 
-            src="https://customer-assets.emergentagent.com/job_audit-ia/artifacts/03vw2jbk_WhatsApp%20Image%202025-10-30%20at%2022.09.14%20%281%29.jpeg" 
+            src="/assets/images/main-logo.png" 
             alt="Conjectura Logo" 
-            className="dark-logo"
+            className="dark-logo w-[150px] h-auto"
           />
         </div>
 
