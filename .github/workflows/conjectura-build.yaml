@@ -48,7 +48,7 @@ jobs:
         uses: ionos-deploy-now/artifact-action@v1
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
-          service-host: api.ionos.space
+          service-host: api-eu.ionos.space
           project-id: ebacdb41-3fef-415a-a889-271834df2b6a
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
